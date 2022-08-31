@@ -4,16 +4,16 @@ let button = document.getElementById("button");
 
 button.addEventListener("click" , event => {
 
-          event.preventDefault();  //cancels the event if it is cancelable{Clicking on a "Submit" button  or a "link"}
+          event.preventDefault();                              //cancels the event if it is cancelable{Clicking on a "Submit" button  or a "link"}
           console.log("fetching for " + url.value);
           fetchFile(url.value); 
      }
 )
 
-// fetch == search for
+                                                               // fetch == search for
 
-function fetchFile(url_value){  //fetch is an API that allows us to make http-requsts
-                          //fetch returns a promise {then , catch} 
+function fetchFile(url_value){                                 //fetch is an API that allows us to make http-requsts
+                                                               //fetch returns a promise {then , catch} 
 
      fetch(url_value).then(res => res.blob()).then(blob => {   //fetchfile will get the url-value and will fetch for it , then the search result will be turned into a blob
                                                                //a blob is an object of imutable/raw data
