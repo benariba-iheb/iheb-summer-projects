@@ -1,0 +1,203 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 1.75rem;
+     font-weight: 600;
+}
+
+
+header{
+     text-align:center;
+     color : whitesmoke;
+     margin:1rem 2rem 2rem 2rem;
+     font-size: 2.5rem;
+}
+
+body{
+     font-size: 1rem;
+     background-color: #333;
+     overflow: hidden;
+}
+
+.quote-block{
+     display: grid;
+     background-color: grey;
+     border-radius: 2rem;
+     margin: 1rem;
+
+}
+
+.fa-quote-left{
+     text-align: left;
+     margin-left: 10%;
+
+}
+
+.text{
+     display: block;
+     text-align: center; color: whitesmoke;
+     font-size: 1.5rem; 
+     font-weight: bold; padding: 1rem;
+}
+
+.fa-quote-right{
+text-align: right;
+margin-right: 10%;
+}
+
+#author{
+     margin-right: 9%;
+     text-align: right;
+     font-size: 1rem;
+}
+
+.button-section{
+     display: grid;
+     grid-template-columns: 1fr 1fr ;
+     border-top: solid rgba(33 , 33 , 33 , 0.3) 4px ;
+     margin: 1rem;
+     padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+
+.new{
+     width: fit-content;
+     height: fit-content;
+     position: relative;
+     padding: 0.5rem 0.75rem;
+     border:none;
+     outline: none;
+     margin: auto 1rem auto auto;
+     font-size: 1rem;
+     background-color: transparent;
+     color: black;
+     cursor: pointer;
+     z-index: 1;
+     transition: all 0.2s ease-out;
+}
+.new::before{
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 7px;
+     height: 100%;
+     border-radius: 20%;
+     background-color: black;
+     z-index: -1;
+     transition: all 0.2s ease-out;
+}
+
+.new:hover::before{
+     width: 100%;
+     border-radius: 10px;
+}
+
+.new:hover{
+     color: whitesmoke;
+}
+
+.new .loading{
+     content: "loading";
+     background-color: #333;
+}
+
+.new:active::before{
+     background: #333;
+}
+
+ul{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: flex-start;
+     margin-right: 0.5rem;
+}
+
+li{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 3rem;
+     width: 3rem;
+     border: 3px solid black;
+     border-radius: 50%;
+     padding: 1rem;
+     margin: auto 0 auto 1rem;
+     list-style: none;
+     transition: border 0.2s ease-out , color 0.2s ease-out;
+}
+
+li:hover{
+     border:3px solid whitesmoke;
+     color: whitesmoke;
+     cursor: pointer;
+}
+span{
+     margin-right: 1%;
+     text-align: right;
+     font-size: 1rem;
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+footer{
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content:space-around;
+     margin: 2rem;
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: whitesmoke;
+  border-radius: 50%;
+  padding: 1rem;
+  margin: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper a:visited{
+     color: black;
+}
+
+.wrapper .facebook:hover ,
+.wrapper .facebook a:visited:hover {
+  background: #1877F2;
+  color: whitesmoke;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter a:visited:hover {
+  background: #1DA1F2;
+  color: whitesmoke;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram a:visited:hover {
+  background: #E4405F;
+  color: whitesmoke;
+}
+
+.wrapper .github:hover,
+.wrapper .github a:visited:hover{
+  background: #333333;
+  color: whitesmoke;
+}
